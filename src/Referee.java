@@ -29,7 +29,7 @@ public class Referee {
 		
 		//실행횟수가 3회 이하인 경우 승리하지 않아도 조건승리가 되는 에러 때문에 사용 ->  this.pre_win=(num_set*3)/10; 때문 
 		if(this.win>1 || ((this.num_set==3 || this.num_set==2) && this.win==1)) { 
-			if(this.win>=this.pre_win) {//따라서 3판이상 진행시 2판 이상 승리해야 조건승리가 발동 하도록 함
+			if(this.win>=this.pre_win) { //게임 횟수가 3회 이상일 경우 조건승리 판단 역할 
 				System.out.println("★ 조건승리: "+this.num_set+"번중 30% 승리 ★");
 				return -1; //반복문을 종료 시키는 용도 -> 게임이 끝났다는것을 전달 
 			}
